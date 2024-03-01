@@ -16,7 +16,7 @@ export const createPosts = async (req, res)=>{
   try{
     const {tittle, description} = req.body
     let image = null
-    let localImageSaved = req.files.image
+    let localImageSaved = req.files?.image
     let pathLocalImage = null
     if(localImageSaved){
       pathLocalImage = req.files.image.tempFilePath
